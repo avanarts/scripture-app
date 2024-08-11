@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture Memorization App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+</head>
+<body>
+    <div>
+        <h1>Scripture Memorization Tool v1</h1>
+                <div class="selector">
+                    <!--<label for="selector">Select a Verse:</label>-->
+                    <select class="book" name="Book" id="select-book" onchange="updateChapter()">
+                        <option>Book</option>
+                    </select>
+                    <select class="chapter" name="Chapter" id="select-chapter" onchange="updateVerse()">
+                        <option>Chapter</option>
+                    </select>
+                    <select class="verse" name="Verse" id="select-verse">
+                        <option>Verse</option>
+                    </select>
+                            <button class="btn btn-outline-dark gy-50" id="submit-btn" onclick="grabData()">Submit</button>
+                </div>
+                <br>
+                <br>
+                <div class="verse-container" id="verse-container"></div>
+                <div class="disappear-btn">
+                    <button id="decrease-txt" class="btn btn-outline-primary" onclick="randRemove()">Remove Words</button>
+                    <button id="reset-btn" class="btn btn-outline-dark" onclick="showVerse()">Show Verse</button>
+                </div>
+
+    </div>
+    <div class="scripture-text"></div>
+    <script src="app.js"></script>
+</body>
+</html>
